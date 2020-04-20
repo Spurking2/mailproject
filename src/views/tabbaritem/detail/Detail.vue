@@ -11,7 +11,7 @@
         <Detail-rate :rate="rate" ref="rate"></Detail-rate>
         <Goods-img :goods="recommend" ref="goodsimg"></Goods-img>
       </Scroll>
-      <Detail-bottom></Detail-bottom>
+      <Detail-bottom @addClick="addClick"></Detail-bottom>
     </div>
 </template>
 
@@ -56,7 +56,8 @@ export default {
       navposition:[],
       get:null,
       current:0,
-      currentIndex:0
+      currentIndex:0,
+      product:{}
     }
   },
   created () {
@@ -143,7 +144,21 @@ export default {
       console.log(index)
       this.$refs.scroll.scrollTo(0,-this.navposition[index],100)
 
-    }
+    },
+    
+    addClick(){
+      console.log('11')
+      this.product = {}
+      this.product.image = this.topimage[0];
+      this.product.title = this.goods.title;
+      this.product.desc = this.goods.desc;
+      this.product.price = this.goods.lowPrice;
+      this.product.iid = this.iid;
+      this.product.count = 1;
+      this.product.imgChecked = false;
+
+      this.$store.dispatch('addCart', this.product)
+}
   },
 }
 </script>
@@ -162,6 +177,6 @@ export default {
     background-color: #fff;
   }
   .content {
-    height: calc(100% - 44px );
+    height: calc(100% - 44px - 50px);
   }
 </style>

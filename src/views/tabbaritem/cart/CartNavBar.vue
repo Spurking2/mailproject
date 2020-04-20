@@ -1,6 +1,6 @@
 <template>
     <div>
-      <h1>购物车</h1>
+      
     </div>
 </template>
 
@@ -9,6 +9,6 @@ export default {
 }
 </script>
 
-<style>
+<style scoped>
 
 </style>

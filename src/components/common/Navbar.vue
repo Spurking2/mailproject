@@ -17,7 +17,7 @@ export default {
 }
 </script>
 
-<style>
+<style scoped>
 .navbar {
   display: flex;
   line-height: 44px;

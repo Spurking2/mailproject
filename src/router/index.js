@@ -3,7 +3,7 @@ import VueRouter from 'vue-router'
 
 const Home = () => import('../views/tabbaritem//home/Home.vue')
 const Category = () => import('../views/tabbaritem/Category.vue')
-const Cart = () => import('../views/tabbaritem/Cart.vue')
+const Cart = () => import('../views/tabbaritem/cart/Cart.vue')
 const Profile = () => import('../views/tabbaritem/Profile.vue')
 const Detail = () => import('../views/tabbaritem/detail/Detail.vue')
 

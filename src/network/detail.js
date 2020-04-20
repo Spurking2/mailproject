@@ -17,6 +17,8 @@ export function recommenddata(){
 
 export class Goods {
   constructor(itemInfo, columns, services){
+    this.desc = itemInfo.desc
+    this.lowPrice = itemInfo.lowPrice
     this.title = itemInfo.title
     this.price = itemInfo.price
     this.oldPrice = itemInfo.oldPrice
